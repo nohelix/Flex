@@ -164,17 +164,23 @@ main {
     header {
       h1, h2 {
         margin-bottom: 0;
+        color: @header-text-color;
       }
 
       p {
-        color: @header-text-color;
         margin-top: 0;
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.15rem;
       }
 
-      p a {
+      .dateline {
+        color: @dark-purple;
+      }
+
+      .dateline a {
         text-decoration: underline;
       }
+
+
 
       .translations {
         float: right;
@@ -518,7 +524,7 @@ a.sidebar-nav-item.active:focus {
     overflow-y: auto;
 
     div {
-      padding: 36px 18px;
+      // padding: 36px 18px;
       position: absolute;
       // right: 0rem;
       bottom: 0rem;
