@@ -38,10 +38,7 @@
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   {% endif %}
-
-  <div>
-    {{ article.content }}
-  </div>
+  
   <div class="tag-cloud">
     <p>
       {% if article.tags %}
@@ -50,6 +47,10 @@
       {% endfor %}
       {% endif %}
     </p>
+  </div>
+
+  <div>
+    {{ article.content }}
   </div>
 
   {% if ADD_THIS_ID %}
