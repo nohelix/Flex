@@ -362,103 +362,134 @@ ul.list {
   }
 }
 
-ul.social {
-  font-size: 1.6em;
-  padding-top: 20px;
+// ul.social {
+//   font-size: 1.6em;
+//   padding-top: 20px;
 
-  li {
-    display: inline;
-  }
+//   li {
+//     display: inline;
+//   }
 
-  a:hover {
-    z-index: 2;
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
-  }
+//   a:hover {
+//     z-index: 2;
+//     -webkit-transform: translateY(-5px);
+//     transform: translateY(-5px);
+//   }
 
-  a {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    border-radius: 100%;
-    text-align: center;
-    font-size: .8em;
-    line-height: 36px;
-  }
+//   a {
+//     display: inline-block;
+//     width: 36px;
+//     height: 36px;
+//     border-radius: 100%;
+//     text-align: center;
+//     font-size: .8em;
+//     line-height: 36px;
+//   }
 
-  a.sc-facebook {
-    background-color: @facebook-bg-color;
-  }
+//   a.sc-facebook {
+//     background-color: @facebook-bg-color;
+//   }
 
-  a.sc-google {
-    background-color: @google-bg-color;
-  }
+//   a.sc-google {
+//     background-color: @google-bg-color;
+//   }
 
-  a.sc-instagram {
-    background-color: @instagram-bg-color;
-  }
+//   a.sc-instagram {
+//     background-color: @instagram-bg-color;
+//   }
 
-  a.sc-pinterest {
-    background-color: @pinterest-bg-color;
-  }
+//   a.sc-pinterest {
+//     background-color: @pinterest-bg-color;
+//   }
 
-  a.sc-linkedin {
-    background-color: @linkedin-bg-color;
-  }
+//   a.sc-linkedin {
+//     background-color: @linkedin-bg-color;
+//   }
 
-  a.sc-medium {
-    background-color: @medium-bg-color;
-  }
+//   a.sc-medium {
+//     background-color: @medium-bg-color;
+//   }
 
-  a.sc-rss {
-    background-color: @rss-bg-color;
-  }
+//   a.sc-rss {
+//     background-color: @rss-bg-color;
+//   }
 
-  a.sc-stack-overflow {
-    background-color: @stack-overflow-bg-color;
-  }
+//   a.sc-stack-overflow {
+//     background-color: @stack-overflow-bg-color;
+//   }
 
-  a.sc-tumblr {
-    background-color: @tumblr-bg-color;
-  }
+//   a.sc-tumblr {
+//     background-color: @tumblr-bg-color;
+//   }
 
-  a.sc-twitter {
-    background-color: @twitter-bg-color;
-  }
+//   a.sc-twitter {
+//     background-color: @twitter-bg-color;
+//   }
 
-  a.sc-youtube {
-    background-color: @youtube-bg-color;
-  }
+//   a.sc-youtube {
+//     background-color: @youtube-bg-color;
+//   }
 
-  a.sc-github, a.sc-github-alt {
-    background-color: @github-bg-color;
-  }
+//   a.sc-github, a.sc-github-alt {
+//     background-color: @github-bg-color;
+//   }
 
-  a.sc-envelope-o {
-    background-color: @email-bg-color;
-  }
+//   a.sc-envelope-o {
+//     background-color: @email-bg-color;
+//   }
 
-  a.sc-reddit {
-    background-color: @reddit-bg-color;
-  }
+//   a.sc-reddit {
+//     background-color: @reddit-bg-color;
+//   }
 
-  a.sc-soundcloud {
-    background-color: @soundcloud-bg-color;
-  }
+//   a.sc-soundcloud {
+//     background-color: @soundcloud-bg-color;
+//   }
 
-  a.sc-gitlab {
-    background-color: @gitlab-bg-color;
-  }
+//   a.sc-gitlab {
+//     background-color: @gitlab-bg-color;
+//   }
 
-  a.sc-xing {
-    background-color: @xing-bg-color;
-  }
+//   a.sc-xing {
+//     background-color: @xing-bg-color;
+//   }
 
-  a.sc-bitbucket {
-    background-color: @bitbucket-bg-color;
-  }
+//   a.sc-bitbucket {
+//     background-color: @bitbucket-bg-color;
+//   }
 
+// }
+
+.sidebar-nav {
+  margin-bottom: 1rem;
 }
+.sidebar-nav-item {
+  display: block;
+  padding: .25rem 0.5rem;
+  background: #7dafc4;
+  margin: 0 .2rem;
+  border-radius: .25rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  float: left;
+  width: 12%;
+  line-height: 1.5rem;
+}
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  background: #6096ac;
+  text-decoration: none;
+}
+.sidebar-nav-item.active {
+  color: #6096ac;
+  background: #fff;
+}
+a.sidebar-nav-item.active:hover,
+a.sidebar-nav-item.active:focus {
+  color: #fff;
+}
+
 
 .ads-aside {
   display: inline-block;
