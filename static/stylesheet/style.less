@@ -197,18 +197,32 @@ main {
     }
 
     blockquote, pre {
-      background-color: rgba(128,128,128,0.05);
+      // background-color: rgba(128,128,128,0.05);
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
-      border-left: 8px solid rgba(128,128,128,0.075);
+      border-left: 8px solid @light-purple;
       border-left-width: 10px;
     }
 
     blockquote {
-      padding: 10px 20px;
+      padding: 5px 20px;
       font-weight: 300;
-      font-size: 1.1em;
+      font-size: 1.2em;
+      margin-top: 0;
+      margin-bottom: 0;
     }
+
+    // blockquote::before {
+    //   content: "\f000";
+   	//   font-size: 4rem;
+   	//   display: inline-block;
+   	//   position: relative;
+   	//   margin-left: -2.1rem;
+   	//   left: -1.5rem;
+   	//   top: 2rem;
+   	//   color: @light-purple;
+   	//   margin-top: -1em;
+   	// }
 
     pre {
       padding: 4px;
