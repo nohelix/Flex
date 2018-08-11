@@ -28,6 +28,15 @@
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/stylesheet/style.min.css">
   {% endif %}
 
+  {% if USE_SEARCH %}
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/tipuesearch/tipuesearch.css">
+    <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/tipuesearch/css/tipuesearch.css">
+    <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch.min.js"></script>
+  {% endif %}
+
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/pygments/{{ PYGMENTS_STYLE|default('github') }}.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <!-- <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/font-awesome/css/font-awesome.min.css"> -->
@@ -119,6 +128,10 @@
         </ul>
       </nav>
       {% endif %}
+
+      <form action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+        <input id="tipue_search_input" type="text" name="q" placeholder="Search">
+      </form>
 
       <ul class="social">
         {% for name, link, type in SOCIAL %}
