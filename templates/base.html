@@ -31,10 +31,6 @@
   {% if USE_SEARCH %}
     <link rel="stylesheet" href="{{ SITEURL }}/theme/tipuesearch/tipuesearch.css">
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_content.js"></script>
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/tipuesearch/css/tipuesearch.css">
-    <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
-    <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch.min.js"></script>
   {% endif %}
 
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/pygments/{{ PYGMENTS_STYLE|default('github') }}.min.css">
@@ -129,9 +125,11 @@
       </nav>
       {% endif %}
 
+      {% if USE_SEARCH %}
       <form action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
         <input id="tipue_search_input" type="text" name="q" placeholder="Search">
       </form>
+      {% endif %}
 
       <ul class="social">
         {% for name, link, type in SOCIAL %}

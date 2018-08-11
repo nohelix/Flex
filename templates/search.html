@@ -3,12 +3,15 @@
 {% block content %}
 
 <div class="entry-content">
+	<script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch.min.js"></script>
 <script>
     $(document).ready(function() {
         $('#tipue_search_input').tipuesearch({
             'show': 8,
             'mode': 'json',
-            'contentLocation': '{{ SITEURL }}/tipuesearch_content.json'
+            'contentLocation': 'tipuesearch_content.json'
         });
     });
 </script>
