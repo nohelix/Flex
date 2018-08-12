@@ -1,6 +1,17 @@
 /*Font-Awsome layered logo*/
-<span class="fa-logo">
+/*<span class="fa-logo">
 	<i class="fas fa-brain" data-fa-transform="grow-2"></i>
     <i class="fas fa-dna fa-inverse" data-fa-transform="shrink-10 left-4"></i>
     <i class="fas fa-microscope fa-inverse" data-fa-transform="shrink-10 right-4"></i>
-</span>
+</span>*/
+
+.GraduateSchool::before {
+	display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f501";
+  }
