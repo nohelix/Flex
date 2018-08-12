@@ -171,7 +171,7 @@
     {% endif %}
 
     {% if MAIN_MENU %}
-    <nav>
+    <nav class="mainmenu">
       <a href="{{ SITEURL }}">{{ _('Home') }}</a>
 
       {% for title, link in MENUITEMS %}
@@ -188,8 +188,10 @@
     </nav>
     {% endif %}
 
-    {% block content %}
-    {% endblock %}
+    <div class="content">
+      {% block content %}
+      {% endblock %}
+    </div>
 
     <footer>
       {% if CC_LICENSE %}
