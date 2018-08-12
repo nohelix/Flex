@@ -108,7 +108,6 @@ aside {
   nav {
     ul {
       li {
-        display: inline;
         line-height: 1.6em;
         font-size: 1.28em;
         // text-transform: lowercase;
@@ -120,6 +119,7 @@ aside {
 main {
 	background-image: ;
   nav {
+  	display: relative;
     text-align: center;
     text-transform: uppercase;
     font-size: .72em;
@@ -559,6 +559,13 @@ a.sidebar-nav-item.active:focus {
       }
     }
   }
+
+  nav {
+  	width: 75%;
+    position: fixed;
+    background-color: @white;
+    text-align: center;
+	}
 
   main {
     width: 75%;
