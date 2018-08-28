@@ -17,6 +17,8 @@
     <meta name="robots" content="{{ ROBOTS }}" />
   {% endif %}
 
+  <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-3.3.1.min.js"></script>
+
   {% if USE_GOOGLE_FONTS != False %}
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
@@ -31,7 +33,6 @@
 
   {% if USE_SEARCH %}
     <link rel="stylesheet" href="{{ SITEURL }}/theme/tipuesearch/tipuesearch.css">
-    <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-3.3.1.min.js"></script>
   {% endif %}
 
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/pygments/{{ PYGMENTS_STYLE|default('github') }}.min.css">
@@ -92,6 +93,8 @@
   {% if GOOGLE_TAG_MANAGER %}
     {% include "partial/gtm.html" %}
   {% endif %}
+
+  <link rel="stylesheet" href="{{SITEURL}}/theme/stylesheet/colorbox.css">
 </head>
 
 <body>
@@ -222,5 +225,9 @@
   {% if GITHUB_CORNER_URL %}
   {% include 'partial/github.html' %}
   {% endif %}
+
+  <script src="{{SITEURL}}/theme/js/jquery.colorbox-min.js"></script>
+  <script src="{{SITEURL}}/theme/js/main.js"></script>
+
 </body>
 </html>
