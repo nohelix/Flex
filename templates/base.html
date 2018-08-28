@@ -121,7 +121,7 @@
 
       {% if SITESUBTITLE %}<p>{{ SITESUBTITLE }}</p>{% endif %}
 
-      {% if pages or LINKS %}
+      {% if pages and NAV_PAGES or LINKS %}
       <nav>
         <ul class="list">
           {% if not PAGES_SORT_ATTRIBUTE -%}
