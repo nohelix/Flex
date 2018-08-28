@@ -20,6 +20,9 @@
     
     <h1 id="{{ article.slug }}">{{ article.title }}</h1>
     <p class="dateline">
+      {% if CAT_ICONS %}
+        <i class="catagory-icon {{ article.category|replace(' ','') }}"></i>
+      {% endif %}
       {{ _('Posted in %(category)s on %(when)s',
            when=article.locale_date,
            category='<a href="%s/%s">%s</a>'|format(SITEURL, article.category.url, article.category)|safe) }}
