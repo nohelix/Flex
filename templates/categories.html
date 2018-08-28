@@ -10,10 +10,11 @@
   <div>
     <ul class="list">
       {% for category, articles in categories|sort %}
-      {% if CAT_ICONS %}
-        <i class="catagory-icon small-icon {{category|replace(' ','') }}"></i>
-      {% endif %}
-      <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a> ({{ articles|count }})</li>
+      <li><a href="{{ SITEURL }}/{{ category.url }}">
+        {% if CAT_ICONS %}
+          <i class="catagory-icon small-icon {{category|replace(' ','') }}"></i>
+        {% endif %}
+      {{ category }}</a> ({{ articles|count }})</li>
       {% endfor %}
     </ul>
   </div>
