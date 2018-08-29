@@ -12,7 +12,7 @@
       {% for category, articles in categories|sort %}
       <li><a href="{{ SITEURL }}/{{ category.url }}">
         {% if CAT_ICONS %}
-          <i class="catagory-icon small-icon {{category|replace(' ','') }}"></i>
+          <i class="category-icon small-icon {{category|replace(' ','') }}"></i>
         {% endif %}
       {{ category }}</a> ({{ articles|count }})</li>
       {% endfor %}
