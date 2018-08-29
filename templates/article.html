@@ -24,9 +24,10 @@
       {% endif %}
     </h1>
     <p class="dateline">
-      
-      {{ _('Posted in %(category)s on %(when)s',
+      <!-- {{ _('Posted in %(category)s on %(when)s',
            when=article.locale_date,
+           category='<a href="%s/%s">%s</a>'|format(SITEURL, article.category.url, article.category)|safe) }} -->
+      {{ _('Posted in %(category)s',
            category='<a href="%s/%s">%s</a>'|format(SITEURL, article.category.url, article.category)|safe) }}
 
       {% if 'post_stats' in PLUGINS %}
