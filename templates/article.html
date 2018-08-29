@@ -29,6 +29,13 @@
            category='<a href="%s/%s">%s</a>'|format(SITEURL, article.category.url, article.category)|safe) }} -->
       {{ _('Posted in %(category)s',
            category='<a href="%s/%s">%s</a>'|format(SITEURL, article.category.url, article.category)|safe) }}
+      
+      {% if article.tags and not HOME_HIDE_TAGS %}
+          &#8226; {{ _('Tagged with') }}
+          {% for tag in article.tags %}
+              <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
+          {% endfor %}
+      {% endif %}
 
       {% if 'post_stats' in PLUGINS %}
         &#8226; {{ article.stats['read_mins'] }} min read
@@ -46,7 +53,7 @@
     </script>
   {% endif %}
   
-  <div class="tag-cloud">
+  <!-- <div class="tag-cloud">
     <p>
       {% if article.tags %}
       {% for tag in article.tags %}
@@ -54,7 +61,7 @@
       {% endfor %}
       {% endif %}
     </p>
-  </div>
+  </div> -->
 
   <div>
     {{ article.content }}
