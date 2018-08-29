@@ -179,6 +179,7 @@ main {
 
     header {
       h1, h2 {
+        margin-top: 0.5em;
         margin-bottom: 0;
         color: @header-text-color;
       }
@@ -546,6 +547,7 @@ a.sidebar-nav-item.active:focus {
   margin-left: 5%;
 }
 
+
 .category-icon::before {
   display: block;
   font-style: normal;
@@ -554,13 +556,20 @@ a.sidebar-nav-item.active:focus {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+  font-size: 9em;
   color: @light-purple;
-  font-size: 14em;
   position: absolute;
-  left: -0.3em;
-  top: 0.2em;
+  left: -8%;
+  top: -.2em;
   z-index: -1;
   opacity: 0.5;
+}
+
+@media (min-width: 512px) {
+  .category-icon::before {
+    font-size: 14em;
+    top: 0.2em;
+  }
 }
 
 .small-icon::before {
