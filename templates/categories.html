@@ -22,7 +22,7 @@
         {% else %}
           {% for article in articles %}
             {% if loop.index == 5 %}
-              <dd class='tight-list'>more...</dd>
+              <dd class='tight-list'><a href="{{ SITEURL }}/{{ category.url }}">more...</a></dd>
             {% elif loop.index <5 %}
               <dd class='tight-list'>{{ article.title }}</dd>
             {% endif %}
