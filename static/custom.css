@@ -4,13 +4,13 @@
 
 .LowKeyBiology::before {
 	content: "\f5dc";
-	left: -0.3em;
 }
 
- .Outreach::before {
- 	content: "\f4c2";
+.Outreach::before {
+	content: "\f4c2";
+	top: -0.2em;
 }
 
- .TechniquesExamined::before {
- 	content: "\f085";
+.TechniquesExamined::before {
+	content: "\f085";
 }
