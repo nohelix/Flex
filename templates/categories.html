@@ -15,6 +15,19 @@
           <i class="category-icon small-icon {{category|replace(' ','') }}"></i>
         {% endif %}
       {{ category }}</a> ({{ articles|count }})</li>
+        {% if articles|count < 3 %}
+          {% for article in articles %}
+            <dd class='tight-list'>{{ article.title }}</dd>
+          {% endfor %}
+        {% else %}
+          {% for article in articles %}
+            {% if loop.index == 5 %}
+              <dd class='tight-list'>more...</dd>
+            {% elif loop.index <5 %}
+              <dd class='tight-list'>{{ article.title }}</dd>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
       {% endfor %}
     </ul>
   </div>
