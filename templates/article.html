@@ -42,14 +42,7 @@
       {% endif %}
 
       {% if article.series %}
-          <p class="series"><b>Part {{ article.series.index }}</b> of the "{{ article.series.name }}" series:</p>
-          <ol class="parts" style="white-space:nowrap;">
-              {% for part_article in article.series.all %}
-                  <li {% if part_article == article %}class="active"{% endif %}>
-                      <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>, {% for tag in article.tags %}({{ tag }}){% if not loop.last %},{% endif %}{% endfor %}
-                  </li>
-              {% endfor %}
-          </ol>
+          <p class="dateline"><b>Part {{ article.series.index }}</b> of the "<a href="#series">{{ article.series.name }}</a>" series</p>
       {% endif %}
     </p>
   </header>
@@ -85,6 +78,18 @@
     <div class="addthis_sharing_toolbox"></div>
     <div class="addthis_inline_share_toolbox"></div>
   </div>
+  {% endif %}
+
+  {% if article.series %}
+    <hr>
+    <p id='series' class="series"><i>Part {{ article.series.index }} of the "{{ article.series.name }}" series</i></p>
+      <ol class="parts">
+          {% for part_article in article.series.all %}
+              <li {% if part_article == article %}class="active"{% endif %}>
+                  <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a> {% for tag in article.tags %}({{ tag }}){% if not loop.last %},{% endif %}{% endfor %}
+              </li>
+          {% endfor %}
+      </ol>
   {% endif %}
 
   {% include "partial/neighbors.html" %}
