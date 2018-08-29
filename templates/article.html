@@ -40,6 +40,17 @@
       {% if 'post_stats' in PLUGINS %}
         &#8226; {{ article.stats['read_mins'] }} min read
       {% endif %}
+
+      {% if article.series %}
+          <p class="series"><b>Part {{ article.series.index }}</b> of the "{{ article.series.name }}" series:</p>
+          <ol class="parts" style="white-space:nowrap;">
+              {% for part_article in article.series.all %}
+                  <li {% if part_article == article %}class="active"{% endif %}>
+                      <a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a>, {% for tag in article.tags %}({{ tag }}){% if not loop.last %},{% endif %}{% endfor %}
+                  </li>
+              {% endfor %}
+          </ol>
+      {% endif %}
     </p>
   </header>
 
