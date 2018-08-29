@@ -18,7 +18,7 @@
       {{ translations.translations_for(article) }}
     {% endif %}
     
-    <h1 id="{{ article.slug }}">{{ article.title }}
+    <h1 id="{{ article.slug }}">{{ article.title|striptags|striptags|striptags|escape }}
     {% if CAT_ICONS %}
         <i class="category-icon {{ article.category|replace(' ','') }}"></i>
       {% endif %}
